@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">  
+		<title>窝牛-资金明细</title>
+		<link href="css/style.css" rel="stylesheet"/>
+		<link href="css/cj.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="header-left">
+				<span class="go-left"></span>
+			</div>
+			<div class="title">
+					资金明细
+			</div>
+		</div>
+		<div class="height45"></div>
+		<!--头部end-->
+		<div class="tongyong">
+			<input type="hidden" value="1" id="page"/><!--分页页码-->
+			<div id="wrapper">
+				<div id="scroller">
+					<div id="pullDown">
+						<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+					</div>
+					<ul class="moneylist"  id="thelist">
+						<li>
+							<div class="fl">
+								<h2>充值</h2>
+								<p>2015-10-12</p>
+							</div>
+							<div class="fr">+140</div>
+						</li>
+						<li>
+							<div class="fl">
+								<h2>编号工作</h2>
+								<p>2015-10-12</p>
+							</div>
+							<div class="fr">+140</div>
+						</li>
+						<li>
+							<div class="fl">
+								<h2>提现</h2>
+								<p>2015-10-12</p>
+							</div>
+							<div class="fr">-140</div>
+						</li>
+					</ul>
+					<div id="pullUp">
+						<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script src="script/jquery-1.11.1.min.js"></script>
+<script src="script/jquery.alerts.min.js"></script>
+<script src="js/wap_ty.js"></script>
+<script>
+$(function(){
+	init();
+})
+//初始化绑定iScroll控件 
+var myScroll,pullDownEl, pullDownOffset,pullUpEl, pullUpOffset,generatedCount = 0;
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	document.addEventListener('DOMContentLoaded', loaded, false); 
+var mon_page;
+//初始化职位列表
+function init(){
+	mon_page=parseInt($("#page").val());	//页码
+	pullUpAction(mon_page);
+}
+//下拉刷新
+function pullDownAction(){
+	pullUpAction(1);
+}
+//上拉加载下一页
+function pullUpAction(page){
+	if(page!=1){
+		mon_page=parseInt($("#page").val());
+	}else{
+		mon_page=page;
+	}
+	//加载职位
+	$.ajax({
+		url:"js/meg.json",
+		data:{'page':mon_page},
+		dataType:"json",
+		type: "Get",
+		success: function (result) {
+            $.each(result.data, function(k,p) {
+            	var option='';
+            	option+='<li><a href="megdetails.html?LetterId='+p.LetterId+'">';
+            	if(p.Status==1){//已读
+            		option+='<span></span>';
+            	}
+            	option+='<h2>'+p.Title+'</h2>';
+            	option+='<p>'+formatTime(p.SendTime,"yyyy-MM-dd HH:mm")+'</p>';
+            	option+='</a></li>';;
+            	$("#thelist").append(option);
+            });
+            $("#page").val(parseInt(msg_page)+1);
+            myScroll.refresh();	
+        }
+	});
+}
+
+</script>

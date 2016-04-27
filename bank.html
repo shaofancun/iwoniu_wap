@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">  
+		<title>窝牛-银行卡管理</title>
+		<link href="css/style.css" rel="stylesheet"/>
+		<link href="css/cj.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="header-left">
+				<span class="go-left"></span>
+			</div>
+			<div class="title">
+					银行卡管理
+			</div>
+			<div class="header-right">
+				<a href="add_bank.html">添加</a>
+			</div>
+		</div>
+		<div class="height45"></div>
+		<!--头部end-->
+		<div class="tongyong banklist">
+			<ul>
+				<li>
+					<p class="mb10 fs16">
+						<span>工商银行</span>
+					</p>
+					<p>
+						<span class="mr10">尾号7872</span>
+						<span>邵钒淳</span>
+					</p>
+					<div onclick="bank.del(1)">删除</div>
+				</li>
+				
+			</ul>
+		</div>
+	</body>
+</html>
+<script src="script/jquery-1.11.1.min.js"></script>
+<script src="script/jquery.alerts.min.js"></script>
+<script src="js/wap_ty.js"></script>
+<script src="js/bank.js"></script>

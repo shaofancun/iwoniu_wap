@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">  
+		<title>窝牛-职位详情</title>
+		<link href="css/style.css" rel="stylesheet"/>
+		<link href="css/cj.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="header-left">
+				<span class="go-left"></span>
+			</div>
+			<div class="title">
+					职位详情
+			</div>
+			<div class="header-right">
+				<a href="user_index.html" class="user"></a>
+			</div>
+		</div>
+		<div class="height45"></div>
+		<!--头部end-->
+		<!--职位详情 -->
+		<div class="jobdetails">
+			<div class="tongyong pad10">
+				<p class="fs16">测试职位</p>
+				<p class="w-red">20.00元/小时(共2天，每天3.00小时)</p>
+			</div>
+			<div class="height4"></div>
+			<div class="tongyong pad10">
+				<a href="company.html?id=">
+				<dl>
+					<span class="fr w-btn">进入</span>
+					<dt><img src="img/home(1).png" class="dt-img">公司详情</dt>
+					<dd>温州励臣网络科技有限公司</dd>
+				</dl>
+				<div class="star-bg mt5">
+					<div class="star-hr" style="width: 33%;"></div>
+				</div>
+				</a>
+			</div>
+			<div class="height4"></div>
+			<div class="tongyong pad10">
+				<dl>
+					<dt><img src="img/People.png" class="dt-img">人数待遇</dt>
+					<dd>招聘人数：2人</dd>
+					<dd>其他待遇：</dd>
+				</dl>
+			</div>
+			<div class="height4"></div>
+			<div class="tongyong pad10">
+				<dl>
+					<dt><img src="img/time.png" class="dt-img">时间日期</dt>
+					<dd>报名截止时间：2015-09-29</dd>
+					<dd>工作开始时间：2015-09-30</dd>
+					<dd>工作结束时间：2015-10-01</dd>
+				</dl>
+			</div>
+			<div class="height4"></div>
+			<div class="tongyong pad10">
+				<dl>
+					<dt><img src="img/Place.png" class="dt-img">工作地点</dt>
+					<dd>温州市鹿城区哈师大是的撒</dd>
+				</dl>
+			</div>
+			<div class="height4"></div>
+			<div class="tongyong pad10">
+				<dl>
+					<dt><img src="img/work-content.png" class="dt-img">工作内容</dt>
+					<dd>温州市鹿城区哈师大是的撒</dd>
+				</dl>
+			</div>
+			<div class="height4"></div>
+		</div>
+		<!--职位详情结束 -->
+		<!--职位详情底部-->
+		<div class="height60"></div>
+		<div class="footer">
+			<a href="javascript:;" onclick="job.signUp(1)"><span><img src="img/baoming(1).png"></span>报名</a>
+			<a href="javascript:;" onclick="job.phone()"><span><img src="img/zixun.png"></span>咨询</a>
+			<!--未收藏-->
+			<a href="javascript:;" onclick="job.followOn(1)" id="on_follow"><span><img src="img/shoucang.png"></span>收藏</a>
+			<!--已收藏-->
+			<a href="javascript:;" onclick="job.followOff(1)" id="off_follow" style="display: none;"><span><img src="img/shoucang2.png"></span>收藏</a>
+		</div>
+		<!--底部结束-->
+		<!--弹框-->
+		<div id="somedialog" class="dialog">
+			<div class="dialog__overlay"></div>
+			<div class="dialog__content">
+				<dl>
+					<dt>温馨提示</dt>
+					<dd class="text">
+						是否电话咨询窝牛平台<br />
+						联系方式：0577-88157722
+					</dd>
+					<dd class="btn">
+						<a href="tel:057788157722">拨打</a>
+						<a href="javascript:;" onclick="job.phone.close()">取消</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="script/jquery-1.11.1.min.js"></script>
+<script src="script/jquery.alerts.min.js"></script>
+<script src="js/wap_ty.js"></script>
+<script src="js/job.js"></script>

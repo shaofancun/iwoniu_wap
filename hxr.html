@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">  
+		<title>窝牛-搜索</title>
+		<link href="css/style.css" rel="stylesheet"/>
+		<link href="css/cj.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="header-left">
+				<span class="go-left"></span>
+			</div>
+			<div class="title">
+					
+			</div>
+			<div class="header-right">
+				<a href="user_index.html" class="user"></a>
+			</div>
+		</div>
+		<div class="height45"></div>
+		<!--头部end-->
+		<div class="tongyong-nbg">
+			<form id="regis">
+			<div class="input-box usericon padl40">
+				<input type="text" id="username" name="username" placeholder="请输入用户名" class="width100" data-val="true"/>
+			</div>
+			<div class="input-box phoneicon mt5 padl40">
+				<input type="text" id="phone" name="phone" placeholder="请输入手机" class="width100" data-val="true"/>
+			</div>
+			<div class="input-box phoneicon mt5 padl40">
+				<input type="text" id="code" name="code" placeholder="请输入验证码" class="width100" data-val="true"/>
+				<!--发送验证码按钮-->
+				<button type="button" id="send_code" class="seed-code" onclick="user.sendcode.send()">发送验证码</button>
+			</div>			
+			<div class="input-box passwordicon mt5 padl40">
+				<input type="password" id="password" name="password" placeholder="请输入密码" class="width100" data-val="true"/>
+			</div>
+			<div class="input-box passwordicon mt5 padl40">
+				<input type="password" id="password_a" name="password_a" placeholder="确认密码" class="width100"/>
+			</div>
+			<p class="input-p">我已阅读并同意 《<a href="about.html?id=">窝牛用户协议</a>》</p>
+			<div class="input-btn mt20">
+				<a href="javascript:;" onclick="tj(regis)">确认注册</a>
+			</div>
+			</form>
+		</div>
+		11111111
+	</body>
+</html>
+<script src="script/jquery-1.11.1.min.js"></script>
+<script src="script/jquery.alerts.min.js"></script>
+<script src="js/wap_ty.js"></script>
+<script>
+function tj(id){
+	var jsonObj = new Object;
+	var rel=$(id).find("*[data-val=true]").each(function(){
+		jsonObj[this.name]=this.value
+		
+	});
+	//localStorage.setItem("msg",JSON.stringify(jsonObj));
+	console.log(jsonObj);
+	//console.log(sessionStorage);
+}
+
+</script>

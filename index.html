@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<div id='wx_pic' style='margin: 0 auto; display: none;'>
+	   <img src='img/zhiwei-img.jpg' />
+	</div>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, width=device-width, user-scalable=no">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">  
+		<title>窝牛-首页</title>
+		<link href="css/style.css" rel="stylesheet"/>
+		<link href="css/cj.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="header-left" onclick="nocity()">
+				<span class="city-gps">温州</span>
+			</div>
+			<div class="search">
+				<a href="search.html">
+					<div class="search-fdj"></div>					
+					<div class="search-text">请输入关键字</div>
+				</a>
+			</div>
+			<div class="header-right">
+				<a href="message.html" id="message" class="message"></a>
+			</div>
+		</div>
+		<div class="height45"></div>
+		<!--头部end-->
+		<!--幻灯片banner-->
+		<div class="banner">
+			<div id="slider" class="swipe" style="visibility:visible;">  
+			    <div class="swipe-wrap">  
+			        <figure><div><a href=""><img src="http://pubcampus.oss-cn-shenzhen.aliyuncs.com/img/2015/11/6c5df4d1054a4b63b72dff3782d4659f.jpeg" width="100%"/></a></div></figure>
+			        <figure><div><a href=""><img src="http://pubcampus.oss-cn-shenzhen.aliyuncs.com/img/2015/11/f7eb51336f1f4349ad1270851aaf2acf.jpeg" width="100%"/></a></div></figure>
+			        <figure><div><a href=""><img src="http://pubcampus.oss-cn-shenzhen.aliyuncs.com/img/2015/11/e105564d59254317963ef579f3459b55.jpeg" width="100%"/></a></div></figure>
+			    </div>  
+			</div>
+			<!--小标点-->
+			<nav>  
+				<ul id="position">  				    
+				  <li class=""></li>  				    
+				  <li class=""></li>
+				  <li class=""></li>  				    
+				</ul>  
+			</nav> 
+		</div>
+		<!--幻灯片banner结束-->
+		<!--职位分类-->
+		<div class="tongyong zhiwei-fenlei">
+			<ul>
+				<li><a href="joblist.html"><span><img src="img/zhiwei1.fw.png"></span>全部</a></li>
+				<li><a href="joblist.html?type=1"><span><img src="img/zhiwei2.fw.png"></span>推荐有礼</a></li>
+				<li><a href="joblist.html?type=2"><span><img src="img/zhiwei3.fw.png"></span>长期兼职</a></li>
+				<li><a href="joblist.html?type=3"><span><img src="img/zhiwei4.fw.png"></span>公益</a></li>
+				<li><a href="joblist.html?type=4"><span><img src="img/zhiwei5.fw.png"></span>派单</a></li>
+				<li><a href="joblist.html?type=5"><span><img src="img/zhiwei6.fw.png"></span>客服</a></li>
+				<li><a href="joblist.html?type=6"><span><img src="img/zhiwei7.fw.png"></span>促销</a></li>
+				<li><a href="joblist.html?type=7"><span><img src="img/zhiwei8.fw.png"></span>演员</a></li>
+			</ul>
+		</div>
+		<!--职位分类结束-->
+		<div class="height10"></div>
+		<!--职位列表-->
+		<div class="tongyong zhiwei-list">
+			<ul>
+				<li><a href="jobdetails.html">
+					<!--职位图片and评分-->
+					<div class="img-box">
+						<img src="img/zhiwei-img.jpg">
+						<!--评分-->
+						<div class="star-bg">
+							<div class="star-hr" style="width: 60%;"></div>
+						</div>
+					</div>
+					<!--职位内容-->
+					<h2>兼职美工</h2>
+					<p><i class="time"></i>2015-09-18~2015-09-22(96小时/天)</p>
+					<p><i class="num"></i>招聘人数(3)/已报名(0)</p>
+					<p><span class="w-red">20.00元/小时</span></p>
+					<!--报名状态-->
+					<div class="baoming">
+						<img src="img/yibaoming.fw.png"><!--已报满-->
+					</div>
+				</a></li>
+				<li><a href="jobdetails.html">
+					<!--职位图片and评分-->
+					<div class="img-box">
+						<img src="img/zhiwei-img.jpg">
+						<div class="star-bg">
+							<div class="star-hr" style="width: 33%;"></div>
+						</div>
+					</div>
+					<!--职位内容-->
+					<h2>兼职美工</h2>
+					<p><i class="time"></i>2015-09-18~2015-09-22(96小时/天)</p>
+					<p><i class="num"></i>招聘人数(3)/已报名(0)</p>
+					<p><span class="w-red">20.00元/小时</span></p>
+					<!--报名状态-->
+					<div class="baoming">
+						<img src="img/jieshu.png"><!--已结束-->
+					</div>
+				</a></li>
+			</ul>
+		</div>
+		<!--职位列表结束-->
+		<!--底部-->
+		<div class="height60"></div>
+		<div class="footer">
+			<a href="index.html" class="action"><span><img src="img/1_action.png"></span>兼职</a>
+			<a href="user_index.html"><span><img src="img/3.png"></span>我的	</a>
+		</div>
+		<!--底部结束-->
+	</body>
+</html>
+<script src="script/jquery-1.11.1.min.js"></script>
+<script src="script/jquery.alerts.min.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=pGgwIs1zTj4mfyGa7KavLQr5" type="text/javascript"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/setwx.js"></script>
+<script src="script/swipe.js"></script>
+<script src="js/wap_ty.js"></script>
+<script>
+
+var bullets = document.getElementById('position').getElementsByTagName('li');
+bullets[0].className="on";
+var slider =new Swipe(document.getElementById('slider'), {
+    auto: 3000,  
+    continuous: true,  
+    callback: function(pos) {  
+        var i = bullets.length;  
+        while(i--){  
+            bullets[i].className = ' ';  
+        }  
+        bullets[pos].className = 'on';  
+    }  
+});  
+
+	
+	function nocity(){
+		alert("目前只支持温州市");
+	}
+//	var geolocation = new BMap.Geolocation();
+//	geolocation.getCurrentPosition(function(r) {
+//		if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+//			var x = r.point.lng;
+//			var y = r.point.lat;
+//			console.log(y,x);
+//		} else {
+//		}
+//	}, {
+//		enableHighAccuracy : true
+//	})
+
+</script>

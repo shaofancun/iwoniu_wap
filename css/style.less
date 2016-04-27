@@ -1,0 +1,225 @@
+@wap_color:#53a1ff;
+@charset "utf-8";
+
+.fl { float:left; }
+.fr { float:right; }
+.tl { text-align:left; }
+.tc { text-align:center; }
+.tr { text-align:right; }
+.dis_none { display:none }
+.dis { display:block; }
+.dis_blo { display:inline-block; }
+body {background: #f1f2f4;color: #2f2f2f;line-height: 23px;min-width: 300px;}
+//按钮
+.w-btn{color:#fff;background: @wap_color;padding: 2px 6px;border-radius: 2px;}
+//颜色
+.w-red{ color:#f0453c;}
+.wn-color{ color:@wap_color;}
+//宽度
+.width100{width:100%;}
+//高度
+.height4{height:4px;}
+.height10{height:10px;}
+.height45{height:45px;}
+.height60{height:60px;}
+//内边距
+.pad10{padding: 10px;}
+.padz20{padding:0 20px;}
+.padl40{padding-left: 40px;}
+.padl80{padding-left: 80px}
+.padl100{padding-left: 100px}
+//外边距
+.m10{margin:10px;}
+.mt1{margin-top: 1px;}
+.mt5{margin-top: 5px;}
+.mt10{margin-top:10px;}
+.mt20 {margin-top: 20px;}
+.mb10{margin-bottom:10px}
+.mr10{margin-right:10px}
+//字体
+.fs16{font-size: 16px;}
+.tongyong{overflow: hidden;background: #fff;}
+.tongyong-nbg{overflow: hidden;padding:10px;}
+.prompt{margin:15px 0;
+    p{text-indent: 2em;}
+}
+table{
+    td{padding:5px;border-bottom: 1px solid #f5f5f5;}
+    .title{width:90px;}
+}
+
+//box
+.box{display: -moz-box;display: -webkit-box;display: box;}
+/*wap 头部*/
+.header{height: 45px;position: fixed;top:0;z-index: 90;background: @wap_color;width: 100%;left: 0;top: 0;line-height: 45px;color:#fff;
+    .header-left,.header-right{top: 0;position: absolute;}
+    .header-left{left: 0;
+        a{height: 45px;padding: 0 20px 0 10px;display: block;background: url(../img/left.fw.png) right center no-repeat;background-size: 10px;}
+    }
+    .header-right{right: 6px;
+        a{color:#fff;    width: 36px;    height: 45px; display: block;}
+    }
+    .city-gps{height: 45px;padding: 0 16px 0 10px;display: block;background: url(../img/xia.png) right center no-repeat;background-size: 11px;}
+    .message{width: 36px;height: 45px;background: url(../img/xiaoxi.png) center center no-repeat;display: block;background-size: 22px;}
+    .search{position: relative;width:60%;margin:0 auto;padding-top:7px;padding-left:3%;
+        .search-fdj{background: url(../img/search.png) center center no-repeat;background-size: 14px;position: absolute;top:7px;left:8px;width:40px;height:30px;}
+        .search-text{width: 100%;box-sizing: border-box;height: 30px;float: left;border-radius: 3px;background:rgba(255,255,255,0.3);color:#fff;line-height:30px;text-align: center;}
+    }
+    .title{width:100%;text-align: center;}
+    .user{background: url(../img/3_witer.png) center center no-repeat;background-size: 22px;}
+    .home{background: url(../img/1_witer.png) center center no-repeat;background-size: 22px;}
+    .go-left{height: 45px;padding: 0 20px 0 10px;display: block;background: url(../img/left.fw.png) right center no-repeat;background-size: 10px;}
+    input{border: 1px solid @wap_color;box-sizing: border-box;color:#fff;height: 30px;line-height: 30px;box-shadow: none;}
+    ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    #fff;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    #fff;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color:    #fff;
+    }
+}
+/*banner*/
+.banner{width:100%;overflow: hidden;background: #fff;position: relative;}
+#position li.on{background-color: @wap_color;}
+/*职位分类*/
+.zhiwei-fenlei{
+    @zhiwei-width:35px;
+    li{float:left;width:25%;}
+    span{width:@zhiwei-width; margin: 0 auto 5px; display: block;}
+    a{display: block;text-align: center;padding: 10px 0 8px;color:#666}
+    img{width: @zhiwei-width;padding: 0;}
+}
+/*职位列表*/
+.zhiwei-list{
+    li{position: relative;border-bottom: 1px solid #f1f2f4;}
+    a{display: block;    line-height: 20px;  overflow: hidden; padding: 15px 10px;}
+    .img-box{float: left;margin-right: 10px;
+        img{width:65px;height:65;margin-bottom: 3px;}
+        
+    }
+    h2{    overflow: hidden;    white-space: nowrap;    text-overflow: ellipsis;font-size: 16px;}
+    p{color:#666;font-size: 12px;}
+    i{display: inline-block;vertical-align: middle;margin-right: 3px;
+        &.time{width:14px;height:15px;background: url(../img/time.fw.png) no-repeat; background-size: 12px;}
+        &.num{width:14px;height:15px;background: url(../img/num.fw.png) no-repeat; background-size: 12px;}
+    }
+    .baoming{position:absolute;bottom:15px;right:10px;width:80px; 
+        img{width: 100%;}
+    }
+}
+.star-bg{width: 65px;height: 18px;background: url(../img/xx2.png) no-repeat;background-size:66px;}
+.star-hr{width: 65px;height: 18px;background: url(../img/star.fw.png) no-repeat;background-size:66px;}
+.jobdetails{
+    dl{color:#666}
+    dt{color:#ff6b05;height:26px;line-height:26px;
+       .dt-img{height:14px;vertical-align: middle;margin-right:4px;margin-top: -3px;}
+    }
+    p{margin-bottom:5px;}
+    .tongyong{position: relative;}
+}
+/*登录&注册*/
+.input-box{position: relative;background: #fff  5px center no-repeat;border-bottom:0.5px solid #eee;
+    .height{height: 45px;line-height: 45px;}
+    button,input,select,textarea{outline: none;border: none;background: none;}
+    input{.height;line-height: normal;font-size: 16px;color:#999;}
+    label{position: absolute;.height;padding-left:10px;font-size: 16px;}
+    textarea{min-height:200px;line-height: 45px;font-size: 16px;color:#999;}
+    select{-webkit-appearance: none;appearance: none;.height;background:url(../img/down.png) 95% center no-repeat;background-size: 13px;}
+    .seed-code{width:134px;.height;background:@wap_color;text-align: center;padding: 0 10px;color:#fff;font-size: 14px;position:absolute;right: 0px;top:0px;border-radius: 0px;}
+    .disabled{background:#eee;color:#999;}
+    .input{.height;font-size: 16px;color:#999;}
+}
+.usericon{background-image:url(../img/text_home.png);background-size: 30px;}
+.passwordicon{background-image:url(../img/text_password.png);background-size: 30px;}
+.phoneicon{background-image:url(../img/text_shouji.png);background-size: 30px;}
+.input-btn{background: @wap_color;text-align: center;
+    a{color:#fff;display: block;padding: 10px 0;font-size: 16px;}
+}
+.input-p{margin-top: 10px;color: #999;text-align: center;
+    a{color:@wap_color}
+}
+.upimg-btn{border: dashed 2px #d9d9d9;color:#999;border-radius: 9px;width: 50%;height: 70px;margin:20px auto;position: relative;
+    .jiahao,.text{height: 26px;line-height: 26px;text-align: center;margin-top: 7px;}
+    .jiahao{color:#d9d9d9;font-size: 40px;}
+    .text{}
+    input{opacity:0;position:absolute;top:0;left:0; z-index:9;width:100%;height:70px;}
+    img{width:100%;height:70px;display:none;position:absolute;top:0;left:0; z-index:8; border:none;}
+}
+.line-inp{
+    input{outline: none;border: none;background: none;width: 70%;height:30px;line-height: 30px;padding:0 5px;border-bottom: 1px solid #ddd;}
+    a{padding:3px 7px;font-size: 14px;}
+}
+/*会员中心*/
+.user_img{background: url(../img/Background_top.png) repeat;background-size: 100% 155px;padding:25px 15px 15px;height: 115px;color: #ffffff;position: relative;text-align: center;
+    p{margin-top: 10px;font-size: 16px;}
+    img{border-radius: 50%;}
+}
+.ye-ms{padding:10px;
+    .fgx{width:30px;color:#94949d;text-align: center;display: block;}
+    div{width:50%;float: left;}
+    a{display: block;color:#94949d;padding:0 15px;
+        span{float: right;}
+    }
+}
+.user-list{
+    li{background:url(../img/z.png) 97% center no-repeat;background-size: 13px;
+        a{display: block;border-bottom: 1px solid #f1f2f4;line-height: 30px;height: 30px;padding: 10px 15px;}
+        img{float: left;height: 30px;margin-right: 10px;}
+    }
+    
+}
+.money-box{position: relative;text-align: center;height:130px;padding-top:70px;font-size: 18px;color:#666;
+    .dongjie{position: absolute;bottom: 10px;right: 10px;font-size: 14px;}
+}
+.banklist{
+    li{padding: 10px;position: relative;border-bottom: 1px solid #f1f2f4;}
+    div{position: absolute;top:20px;right: 10px;padding:3px 20px;background:#f0ad4e;color:#fff;border-radius: 2px;}
+}
+.moneylist{
+    li{padding: 10px;position: relative;border-bottom: 1px solid #f1f2f4;overflow: hidden;color:#666;line-height: 24px;
+        h2{color:#000;font-size: 16px;};
+    }
+    .fr{line-height: 40px;font-size: 18px;color:#000000}
+}
+/*分页*/
+.fy {padding: 7px 10px;background: #fff;text-align: center;margin-top: 2px;
+    a{color:#fff;}
+    .btn2{display: inline-block;width:70px;height: 30px; background: @wap_color;line-height: 30px;text-align: center;border-radius: 4px;padding: 0;margin:0 3px;}
+}
+/*底部*/
+.footer{width: 100%;margin: 0 auto;height: 42px;position: fixed;bottom: 0;background: #fff;padding: 4px 0px;border-top: 1px solid #f1f2f4;z-index: 88; .box;
+    a{position: relative;-webkit-box-flex: 1;-moz-box-flex: 1;display: block;text-align: center;font-size: 12px;color:#94949D;
+        &.action{color:@wap_color}
+    }
+    span{display: block;width: 25px;height: 25px;margin: 0 auto;
+        img{width: 100%;}
+    }
+}
+/*弹框*/
+.tangkuan-box{background: #fff;position: absolute;width: 80%;height: 400px;top:0px;left: 0px;z-index: 99;
+    
+}
+/*信息*/
+.massage{
+    li{position: relative;padding:10px 15px 10px 20px;border-bottom: 1px solid #f1f2f4;color:#999}
+    span{width:10px;height:10px;border-radius: 50%;background: @wap_color;position: absolute;left: 4px;top:17px;}
+    h2{font-size: 16px;color:#333}
+    p{line-height: 26px;}
+    
+}
+.companylist{
+    li{position: relative;padding:10px 15px;border-bottom: 1px solid #f1f2f4;color:#333}
+}
+/*我的申请*/
+.sign-zt{display: -moz-box;display: -webkit-box;display: box;width: 100%;position: fixed;z-index: 99;overflow: hidden;background: #fff;top: 45px;    
+    li{position: relative;-webkit-box-flex: 1;-moz-box-flex: 1;color: #666;display: block;height: 44px;font-size: 14px;text-align: center;line-height: 44px;border-right: 1px solid #f5f5f5;border-bottom: 1px solid #f5f5f5;
+        &:last-child{border-right:none;}
+        a{display: block;color:#999}
+        &.action{border-bottom: 1px solid @wap_color;}
+    }
+}
